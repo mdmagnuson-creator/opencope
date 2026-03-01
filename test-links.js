@@ -22,6 +22,21 @@ const urls = [
   { url: 'https://arstechnica.com/gadgets/2026/02/samsung-reveals-galaxy-s26-lineup-with-privacy-display-and-exclusive-gemini-smarts/', keywords: ['Galaxy', 'S26', 'Samsung'] },
   { url: 'https://www.theverge.com/podcast/885942/samsung-galaxy-s26-ai-camera-nightmare-vergecast', keywords: ['Galaxy', 'S26', 'camera'] },
   
+  // NEW: Wall Street AI Psychosis (WIRED)
+  { url: 'https://www.wired.com/story/wall-street-has-ai-psychosis/', keywords: ['Wall Street', 'Dow', 'AI'] },
+  
+  // NEW: Agentic Individuals (WIRED)
+  { url: 'https://www.wired.com/story/silicon-valley-agentic-individuals-future-of-work/', keywords: ['agentic', 'Notion', 'agents'] },
+  
+  // NEW: xAI Power Plant Noise (Ars Technica)
+  { url: 'https://arstechnica.com/tech-policy/2026/02/pops-whines-and-roars-xai-accused-of-torturing-neighbors-of-noisy-power-plant/', keywords: ['xAI', 'turbine', 'noise'] },
+  
+  // NEW: IronCurtain AI Security (WIRED)
+  { url: 'https://www.wired.com/story/ironcurtain-ai-agent-security/', keywords: ['IronCurtain', 'agent', 'rogue'] },
+  
+  // AI Power Plants - Trump State of Union (BBC)
+  { url: 'https://www.bbc.com/news/articles/cn48jj3y8ezo', keywords: ['Trump', 'power', 'AI'] },
+  
   // The memo link
   { url: 'https://mdmagnuson-creator.github.io/opencode-toolkit-website/memo/', keywords: ['memo', 'context', 'software'] },
 ];
