@@ -229,6 +229,8 @@ h2 {
   position: relative;
   overflow: hidden;
   margin-bottom: 2rem;
+  /* Fixed height prevents layout shift when rotating between columns of different heights */
+  min-height: 420px;
 }
 
 .news-column {
@@ -738,6 +740,10 @@ footer {
     font-size: 1.5rem;
     min-width: 1.5rem;
   }
+
+  .news-carousel {
+    min-height: 480px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -772,6 +778,10 @@ footer {
 
   .step-number {
     font-size: 1.25rem;
+  }
+
+  .news-carousel {
+    min-height: 520px;
   }
 }
 
