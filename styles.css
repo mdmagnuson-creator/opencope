@@ -331,41 +331,26 @@ h2 {
   font-style: italic;
 }
 
-.window-points {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.window-point {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  border-left: 4px solid var(--accent);
-}
-
-.window-point h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
+.window-lead {
+  font-size: 1.4rem;
+  font-weight: 600;
   color: var(--fg);
+  margin-bottom: 1.5rem;
 }
 
-.window-point p {
+.window-closing {
   color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.6;
+  border-left: 3px solid #e74c3c;
+  padding-left: 1.25rem;
+  margin-left: 0;
+}
+
+.window-punchline {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-top: 1.5rem;
   margin-bottom: 0;
-}
-
-.window-point.closing {
-  border-left-color: #e74c3c;
-  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(231, 76, 60, 0.08) 100%);
-}
-
-.window-point.closing h3 {
-  color: #e74c3c;
 }
 
 .window-citation {
