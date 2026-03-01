@@ -339,7 +339,7 @@ h2 {
 }
 
 .window-point {
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
 }
 
 .window-point strong {
@@ -350,8 +350,9 @@ h2 {
 }
 
 .window-point p {
-  color: var(--muted);
+  color: #b0b0b0;
   margin: 0;
+  line-height: 1.5;
 }
 
 .window-closing-card {
@@ -360,7 +361,7 @@ h2 {
   border-left: 4px solid #e74c3c;
   border-radius: 12px;
   padding: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .window-closing-card h3 {
@@ -371,9 +372,9 @@ h2 {
 }
 
 .window-closing-card p {
-  color: var(--fg);
+  color: #b0b0b0;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 
