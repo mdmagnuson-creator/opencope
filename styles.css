@@ -458,6 +458,77 @@ h2 {
   margin-bottom: 2rem;
 }
 
+.comparison-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.comparison-side {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.comparison-side.basic {
+  border-top: 3px solid var(--muted);
+}
+
+.comparison-side.advanced {
+  border-top: 3px solid var(--accent);
+}
+
+.comparison-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.comparison-side.basic .comparison-label {
+  color: var(--muted);
+}
+
+.comparison-side.advanced .comparison-label {
+  color: var(--accent);
+}
+
+.comparison-side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparison-side li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.comparison-side li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  opacity: 0.5;
+}
+
+.comparison-side.basic li {
+  color: var(--muted);
+}
+
+.comparison-side.advanced li {
+  color: var(--fg);
+}
+
+.comparison-side li:last-child {
+  margin-bottom: 0;
+}
+
 .action-steps {
   display: flex;
   flex-direction: column;
@@ -609,6 +680,10 @@ footer {
 
   .reason-card p {
     grid-column: 1;
+  }
+
+  .comparison-box {
+    grid-template-columns: 1fr;
   }
 
   .action-step {
