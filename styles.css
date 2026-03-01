@@ -431,11 +431,12 @@ h2 {
   text-underline-offset: 3px;
   font-weight: 600;
   font-size: 0.95rem;
+  opacity: 0.8;
   transition: opacity 0.2s ease;
 }
 
 .window-citation:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* Why We Cope */
@@ -626,10 +627,11 @@ h2 {
   text-decoration: underline;
   text-underline-offset: 3px;
   font-weight: 600;
+  opacity: 0.8;
 }
 
 .step-content a:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .final-question {
