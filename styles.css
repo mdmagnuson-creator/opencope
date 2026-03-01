@@ -267,6 +267,13 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
+.swipe-hint {
+  display: none;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
 .news-citation {
   font-size: 0.75rem;
   color: var(--accent);
@@ -666,6 +673,24 @@ footer {
 
   .news-grid {
     grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .news-item {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+  }
+
+  .swipe-hint {
+    display: block;
   }
 
   .reason-card {
