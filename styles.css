@@ -401,6 +401,69 @@ h2 {
   font-size: 1.1rem;
 }
 
+.what-now-intro {
+  font-size: 1.25rem;
+  color: var(--fg);
+  margin-bottom: 2rem;
+}
+
+.action-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.action-step {
+  display: flex;
+  gap: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease;
+}
+
+.action-step:hover {
+  border-color: var(--accent);
+}
+
+.step-number {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.6;
+  line-height: 1;
+  min-width: 2rem;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.step-content a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.step-content a:hover {
+  text-decoration: underline;
+}
+
 .final-question {
   font-size: 1.35rem;
   padding: 1.5rem;
@@ -496,6 +559,15 @@ footer {
   .reason-card p {
     grid-column: 1;
   }
+
+  .action-step {
+    padding: 1.25rem;
+  }
+
+  .step-number {
+    font-size: 1.5rem;
+    min-width: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -521,6 +593,15 @@ footer {
 
   .news-headline {
     font-size: 1.5rem;
+  }
+
+  .action-step {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .step-number {
+    font-size: 1.25rem;
   }
 }
 
