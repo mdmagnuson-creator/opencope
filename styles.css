@@ -338,19 +338,35 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-.window-closing {
-  color: var(--muted);
-  border-left: 3px solid #e74c3c;
-  padding-left: 1.25rem;
-  margin-left: 0;
+.window-closing-card {
+  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(231, 76, 60, 0.08) 100%);
+  border: 1px solid var(--card-border);
+  border-left: 4px solid #e74c3c;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-.window-punchline {
-  font-size: 1.2rem;
+.window-closing-card h3 {
+  font-size: 1.15rem;
   font-weight: 700;
+  color: #e74c3c;
+  margin-bottom: 0.75rem;
+}
+
+.window-closing-card p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.window-closing-card .window-punchline {
   color: var(--fg);
-  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
   margin-bottom: 0;
+  margin-top: 1rem;
 }
 
 .window-citation {
