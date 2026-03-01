@@ -1,0 +1,126 @@
+/* OpenCope - Styles */
+
+:root {
+  --bg: #0a0a0a;
+  --fg: #e0e0e0;
+  --accent: #ff6b35;
+  --muted: #666;
+  --card-bg: #1a1a1a;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #fafafa;
+    --fg: #1a1a1a;
+    --accent: #d4501e;
+    --muted: #888;
+    --card-bg: #fff;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.hero {
+  padding: 2rem 0;
+  border-top: 1px solid var(--muted);
+  border-bottom: 1px solid var(--muted);
+  margin: 2rem 0;
+}
+
+.intro {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.intro:last-child {
+  margin-bottom: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--muted);
+  text-align: center;
+  color: var(--muted);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Cope cards - for future content */
+.cope-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--accent);
+}
+
+.cope-quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cope-reality {
+  color: var(--muted);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://opencode.ai/schemas/project.json",
+  
+  "name": "opencope",
+  "description": "A satirical one-page website confronting the 'cope' about opencode and the AI revolution in software development",
+  
+  "stack": {
+    "languages": ["html", "css", "javascript"],
+    "runtime": "static",
+    "packageManager": "npm"
+  },
+  
+  "apps": {
+    "web": {
+      "name": "OpenCope Website",
+      "path": "./",
+      "framework": "vanilla",
+      "type": "static-site",
+      "entryPoint": "index.html",
+      "outputDir": "."
+    }
+  },
+  
+  "styling": {
+    "framework": "custom-css",
+    "darkMode": {
+      "enabled": true,
+      "strategy": "prefers-color-scheme"
+    }
+  },
+  
+  "commands": {
+    "dev": "npx serve -p 4005",
+    "build": "echo 'Static site - no build needed'",
+    "lint": "echo 'No linting configured'",
+    "test": "echo 'No tests configured'"
+  },
+  
+  "qualityGates": {
+    "build": false,
+    "typecheck": false,
+    "lint": false,
+    "test": false
+  },
+  
+  "capabilities": {
+    "marketing": true,
+    "satire": true,
+    "seo": true,
+    "responsive": true,
+    "darkMode": true
+  },
+  
+  "git": {
+    "defaultBranch": "main",
+    "autoCommit": true
+  },
+  
+  "agents": {
+    "gitWorkflow": "trunk",
+    "trunkMode": "branchless",
+    "multiSession": false,
+    "commitStrategy": "batch-per-session"
+  },
+  
+  "context": {
+    "memo": "https://mdmagnuson-creator.github.io/opencode-toolkit-website/memo/",
+    "tone": "humorous but direct - calling out cope with wit, not cruelty",
+    "themes": [
+      "AI fatigue from hype causing dismissal",
+      "Fear that it's real and not wanting to face it",
+      "Fear of losing livelihoods",
+      "Build vs buy collapsed to zero",
+      "Software as we know it will dissolve"
+    ]
+  }
+}
