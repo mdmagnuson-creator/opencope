@@ -338,6 +338,22 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+.window-point {
+  margin-bottom: 1.25rem;
+}
+
+.window-point strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--fg);
+  margin-bottom: 0.5rem;
+}
+
+.window-point p {
+  color: var(--muted);
+  margin: 0;
+}
+
 .window-closing-card {
   background: linear-gradient(135deg, var(--card-bg) 0%, rgba(231, 76, 60, 0.08) 100%);
   border: 1px solid var(--card-border);
@@ -355,18 +371,10 @@ h2 {
 }
 
 .window-closing-card p {
-  color: var(--muted);
+  color: var(--fg);
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.window-closing-card .window-punchline {
-  color: var(--fg);
-  font-size: 1.1rem;
-  font-weight: 700;
   margin-bottom: 0;
-  margin-top: 1rem;
 }
 
 .window-citation {
