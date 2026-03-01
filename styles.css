@@ -378,6 +378,21 @@ h2 {
   margin-bottom: 0 !important;
 }
 
+.window-citation {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #4ecdc4;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease;
+}
+
+.window-citation:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
 /* Why We Cope */
 .cope-reasons {
   display: grid;
