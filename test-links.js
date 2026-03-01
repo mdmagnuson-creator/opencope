@@ -1,15 +1,27 @@
 const { chromium } = require('playwright');
 
 const urls = [
-  // Verified working URLs from The Verge
+  // Exhibit A - OpenAI funding (The Verge)
   { url: 'https://www.theverge.com/ai-artificial-intelligence/885958/openai-amazon-nvidia-softback-110-billion-investment', keywords: ['110 billion', 'OpenAI', '900 million'] },
-  { url: 'https://www.theverge.com/ai-artificial-intelligence/884911/burger-king-ai-assistant-patty', keywords: ['Burger King', 'AI', 'Patty'] },
-  { url: 'https://www.theverge.com/policy/886632/pentagon-designates-anthropic-supply-chain-risk-ai-standoff', keywords: ['Pentagon', 'Anthropic', 'supply chain'] },
-  { url: 'https://www.theverge.com/ai-artificial-intelligence/886486/even-ilya-sutskever-weighed-in-on-the-anthropic-pentagon-situation', keywords: ['Ilya', 'Sutskever', 'Anthropic'] },
-  { url: 'https://www.theverge.com/podcast/885942/samsung-galaxy-s26-ai-camera-nightmare-vergecast', keywords: ['Galaxy', 'S26', 'camera', 'photography'] },
-  // Index pages (used for stories without direct article URLs found)
-  { url: 'https://www.theverge.com/ai-artificial-intelligence', keywords: ['Block', 'Perplexity', 'Claude'] },
-  { url: 'https://www.theverge.com/google', keywords: ['Gemini', 'Pixel', 'Uber'] },
+  
+  // Exhibit B - Block layoffs + Burger King (BBC)
+  { url: 'https://www.bbc.com/news/articles/cq570d12y9do', keywords: ['Block', 'layoff', 'AI'] },
+  { url: 'https://www.bbc.com/news/articles/cgk2zygg0k3o', keywords: ['Burger King', 'AI'] },
+  
+  // Exhibit C - Gemini errands (WIRED)
+  { url: 'https://www.wired.com/story/google-gemini-task-automation-galaxy-s26-uber-doordash/', keywords: ['Gemini', 'Uber', 'Galaxy'] },
+  
+  // Exhibit D - Pentagon/Anthropic (WIRED + Ars Technica)
+  { url: 'https://www.wired.com/story/trump-moves-to-ban-anthropic-from-the-us-government/', keywords: ['Trump', 'Anthropic', 'ban'] },
+  { url: 'https://arstechnica.com/ai/2026/02/pete-hegseth-wants-unfettered-access-to-anthropics-models-for-the-military/', keywords: ['Hegseth', 'Anthropic', 'military'] },
+  
+  // Exhibit E - Perplexity Computer (Ars Technica)
+  { url: 'https://arstechnica.com/ai/2026/02/perplexity-announces-computer-an-ai-agent-that-assigns-work-to-other-ai-agents/', keywords: ['Perplexity', 'Computer', 'agent'] },
+  
+  // Exhibit F - Galaxy S26 AI camera (Ars Technica + The Verge)
+  { url: 'https://arstechnica.com/gadgets/2026/02/samsung-reveals-galaxy-s26-lineup-with-privacy-display-and-exclusive-gemini-smarts/', keywords: ['Galaxy', 'S26', 'Samsung'] },
+  { url: 'https://www.theverge.com/podcast/885942/samsung-galaxy-s26-ai-camera-nightmare-vergecast', keywords: ['Galaxy', 'S26', 'camera'] },
+  
   // The memo link
   { url: 'https://mdmagnuson-creator.github.io/opencode-toolkit-website/memo/', keywords: ['memo', 'context', 'software'] },
 ];
