@@ -350,7 +350,7 @@ h2 {
 }
 
 .window-point p {
-  color: #b0b0b0;
+  color: var(--muted);
   margin: 0;
   line-height: 1.5;
 }
@@ -372,7 +372,7 @@ h2 {
 }
 
 .window-closing-card p {
-  color: #b0b0b0;
+  color: var(--muted);
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 0;
