@@ -4,33 +4,48 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('OpenCope loaded. The cope is real. But so is everything else.');
   
-  // News Carousel (mobile only)
+  // News Carousel (all screen sizes)
   const carousel = document.querySelector('.news-carousel');
   const columns = document.querySelectorAll('.news-column');
   const dots = document.querySelectorAll('.carousel-dot');
   let currentIndex = 0;
   let autoRotateInterval;
+  let isTransitioning = false;
   
   function showColumn(index) {
-    columns.forEach((col, i) => {
-      col.classList.toggle('active', i === index);
-    });
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-    });
-    currentIndex = index;
+    if (isTransitioning || index === currentIndex) return;
+    isTransitioning = true;
+    
+    const currentColumn = columns[currentIndex];
+    const nextColumn = columns[index];
+    
+    // Fade out current
+    currentColumn.classList.add('fade-out');
+    
+    // After fade out, switch columns
+    setTimeout(() => {
+      currentColumn.classList.remove('active', 'fade-out');
+      nextColumn.classList.add('active');
+      currentIndex = index;
+      
+      // Update dots
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+      
+      isTransitioning = false;
+    }, 400); // Match CSS transition duration
   }
   
   function nextColumn() {
+    if (isTransitioning) return;
     const next = (currentIndex + 1) % columns.length;
     showColumn(next);
   }
   
   function startAutoRotate() {
-    // Only auto-rotate on mobile
-    if (window.innerWidth <= 768) {
-      autoRotateInterval = setInterval(nextColumn, 4000);
-    }
+    stopAutoRotate(); // Clear any existing interval
+    autoRotateInterval = setInterval(nextColumn, 4000);
   }
   
   function stopAutoRotate() {
@@ -39,11 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Initialize carousel
   if (columns.length > 0) {
-    // Set first column as active on mobile
-    if (window.innerWidth <= 768) {
-      showColumn(0);
-      startAutoRotate();
-    }
+    // Set first column as active
+    columns[0].classList.add('active');
+    dots[0]?.classList.add('active');
+    startAutoRotate();
     
     // Dot click handlers
     dots.forEach((dot, index) => {
@@ -63,17 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(startAutoRotate, 2000);
       }, { passive: true });
     }
-    
-    // Handle resize
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768) {
-        stopAutoRotate();
-        columns.forEach(col => col.classList.remove('active'));
-      } else {
-        showColumn(currentIndex);
-        startAutoRotate();
-      }
-    });
   }
   
   // Add staggered animation to cope cards
