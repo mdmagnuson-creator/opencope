@@ -426,8 +426,9 @@ h2 {
 .window-citation {
   display: inline-block;
   margin-top: 1.5rem;
-  color: #4ecdc4;
-  text-decoration: none;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
   font-weight: 600;
   font-size: 0.95rem;
   transition: opacity 0.2s ease;
@@ -435,7 +436,6 @@ h2 {
 
 .window-citation:hover {
   opacity: 0.8;
-  text-decoration: underline;
 }
 
 /* Why We Cope */
@@ -623,12 +623,13 @@ h2 {
 
 .step-content a {
   color: var(--accent);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   font-weight: 600;
 }
 
 .step-content a:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
 .final-question {
