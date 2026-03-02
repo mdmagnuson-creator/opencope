@@ -229,22 +229,35 @@ h2 {
   position: relative;
   overflow: hidden;
   margin-bottom: 2rem;
-  /* Fixed height prevents layout shift when rotating between columns of different heights */
-  min-height: 420px;
 }
 
 .news-column {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  min-width: 100%;
+  width: 100%;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.4s ease-in-out;
 }
 
+/* First column is always in flow to set container height (it has 3 items = tallest) */
+.news-column:first-child {
+  position: relative;
+  visibility: hidden;
+}
+
+/* All other columns are absolutely positioned on top */
+.news-column:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .news-column.active {
-  display: flex;
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .news-column.fade-out {
@@ -740,10 +753,6 @@ footer {
     font-size: 1.5rem;
     min-width: 1.5rem;
   }
-
-  .news-carousel {
-    min-height: 480px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -778,10 +787,6 @@ footer {
 
   .step-number {
     font-size: 1.25rem;
-  }
-
-  .news-carousel {
-    min-height: 520px;
   }
 }
 
